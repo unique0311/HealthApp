@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ProjectApp.Views.SignupPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <Grid Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="30" />
+            </Grid.RowDefinitions>
+
+            <Path Stroke="#ffff" Data="m0.30001,0l449,0l0, 128.48327c-122.5,64.30167 -332.5,65.89076 -449,7.2429c0,-45.25313 0,-90.47304 0,-135.72617z" Fill="#2196F3" />
+            <StackLayout>
+                <Frame Background="SkyBlue" HeightRequest="60" WidthRequest="60" CornerRadius="30"
+                       Padding="0" Margin="0,50,0,0" HorizontalOptions="Center">
+                    <Image Source="Https://www.findool.com/images/avatars/avatar.png" Aspect="AspectFill" Margin="0" />
+                </Frame>
+            </StackLayout>
+
+            <Grid RowSpacing="4" Grid.Row="1" Margin="20,20,20,0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="1" Text="Sign Up to Continue!" HorizontalOptions="Center" FontSize="Title"
+                       FontAttributes="Bold" Padding="0" Margin="0" />
+
+                <StackLayout Grid.Row="2" Orientation="Vertical">
+                    <StackLayout Orientation="Horizontal">
+                        <Frame Background="Transparent" BorderColor="#2196F3" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" >
+                            <StackLayout Orientation="Horizontal">
+                                <Frame Background="White" HeightRequest="30" WidthRequest="30" CornerRadius="30" Padding="0" Margin="5" >
+                                    <Image Source="https://www.iconfinder.com/icons/5093737/email_envelop_envelope_letter_mail_message_icon" Aspect="AspectFill" Margin="0" />
+                                </Frame>
+                                <Entry Text="{Binding FirstName}" Placeholder="First Name" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" />
+                            </StackLayout>
+                        </Frame>
+                        <Frame Background="Transparent" BorderColor="#2196F3" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" >
+                            <StackLayout Orientation="Horizontal">
+                                <Frame Background="White" HeightRequest="30" WidthRequest="30" CornerRadius="30" Padding="0" Margin="5" >
+                                    <Image Source="https://www.iconfinder.com/icons/5093737/email_envelop_envelope_letter_mail_message_icon" Aspect="AspectFill" Margin="0" />
+                                </Frame>
+                                <Entry Text="{Binding FamilyName}" Placeholder="Family Name" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" />
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <Frame Background="Transparent" BorderColor="#2196F3" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" >
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Background="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5" >
+                                <Image Source="https://www.iconfinder.com/icons/5093737/email_envelop_envelope_letter_mail_message_icon" Aspect="AspectFill" Margin="0" />
+                            </Frame>
+                            <Entry Text="{Binding EmailAddress}" Placeholder="Email Address" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" />
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Background="Transparent" BorderColor="#2196F3" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" >
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Background="DarkGray" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5" >
+                                <Image Source="https://cdn0.iconfinder.com/data/icons/basic-ui-elements-round/700/09_lock-256.pngg" Aspect="AspectFill" Margin="0" />
+                            </Frame>
+                            <Entry Text="{Binding Password}" IsPassword="True" Placeholder="Password" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" />
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Background="Transparent" BorderColor="#2196F3" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30" >
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Background="DarkGray" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5" >
+                                <Image Source="https://cdn0.iconfinder.com/data/icons/basic-ui-elements-round/700/09_lock-256.pngg" Aspect="AspectFill" Margin="0" />
+                            </Frame>
+                            <Entry Text="{Binding ConfirmPassword}" IsPassword="True" Placeholder="Confirm Password" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="0,0,20,0" />
+                        </StackLayout>
+                    </Frame>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,60,0,0" Padding="0" >
+                        <Button Text="SIGN UP" Background="#2196F3" TextColor="White" FontAttributes="Bold" CornerRadius="30" HorizontalOptions="CenterAndExpand" WidthRequest="200" Margin="0,15,0,0" Command="{Binding SignupCommand}" />
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
